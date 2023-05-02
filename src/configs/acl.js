@@ -1,6 +1,5 @@
 // ** Casl Imports
-import { AbilityBuilder, Ability, subject } from "@casl/ability";
-import { object } from "yup";
+import { AbilityBuilder, Ability } from "@casl/ability";
 
 export const AppAbility = Ability
 
