@@ -106,6 +106,7 @@ mock.onPost('/jwt/register').reply(request => {
         return [401, { error: 'Dados inválidos' }]
     }
 })
+
 mock.onGet('/auth/me').reply(config => {
     // ** Obter token do Header
     const token = config.headers.Authorization
