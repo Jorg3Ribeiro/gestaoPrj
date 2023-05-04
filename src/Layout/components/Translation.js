@@ -2,9 +2,9 @@
 import { useTranslation } from 'react-i18next'
 
 const Translations = ({ text }) => {
-    const { t } = useTranslation()
+  const { t } = useTranslation()
 
-    return <>{`${t(text)}`}</>
+  return <>{`${t(text)}`}</>
 }
 
 export default Translations

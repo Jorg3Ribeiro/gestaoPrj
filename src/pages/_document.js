@@ -8,7 +8,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 import createEmotionServer from '@emotion/server/create-instance'
 
 // ** Utils Imports
-import { createEmotionCache } from 'src/@core/utils/create-emotion-cache' 
+import { createEmotionCache } from 'src/@core/utils/create-emotion-cache'
 
 class CustomDocument extends Document {
   render() {
@@ -17,9 +17,12 @@ class CustomDocument extends Document {
         <Head>
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' />
-          <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'/>
-          <link rel='apple-touch-icon' sizes='180x180' href='/images/apple-touch-icon.png' />
-          <link rel='shortcut icon' href='/images/favicon.png' />
+          <link
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
+          />
+          <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+          <link rel='shortcut icon' href='/favicon.png' />
         </Head>
         <body>
           <Main />
@@ -36,13 +39,7 @@ CustomDocument.getInitialProps = async ctx => {
   const { extractCriticalToChunks } = createEmotionServer(cache)
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: App => props =>
-        (
-          <App
-            {...props}
-            emotionCache={cache}
-          />
-        )
+      enhanceApp: App => props => <App {...props} emotionCache={cache} />
     })
   const initialProps = await Document.getInitialProps(ctx)
   const emotionStyles = extractCriticalToChunks(initialProps.html)

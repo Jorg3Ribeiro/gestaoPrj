@@ -5,11 +5,11 @@ import { useContext } from 'react'
 import { AbilityContext } from './can'
 
 const CanViewNavLink = props => {
-    const { children, navLink } = props
+  const { children, navLink } = props
 
-    const ability = useContext(AbilityContext)
+  const ability = useContext(AbilityContext)
 
-    return ability && ability.can(navLink?.action, navLink?.subject) ? <>{children}</> : null
+  return ability && ability.can(navLink?.action, navLink?.subject) ? <>{children}</> : null
 }
 
 export default CanViewNavLink
