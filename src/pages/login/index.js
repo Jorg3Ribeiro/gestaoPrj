@@ -51,9 +51,9 @@ const LoginIllustrationWrapper = styled(Box)(({ theme }) => ({
 }))
 
 const LoginIllustration = styled('img')(({ theme }) => ({
-    maxWidth: '48rem',
+    maxWidth: '68rem',
     [theme.breakpoints.down('xl')]: {
-        maxWidth: '38rem'
+        maxWidth: '48rem'
     },
     [theme.breakpoints.down('lg')]: {
         maxWidth: '30rem'
@@ -126,7 +126,7 @@ const LoginPage = () => {
         })
     }
 
-    const imageSource = skin === 'bordered' ? 'auth-v2-login-illustration-bordered' : 'auth-v2-login-illustration'
+    const imageSource = skin === 'bordered' ? 'gestaoProjeto-bordered' : 'gestaoProjeto'
 
     return (
         <Box className='content-right'>
