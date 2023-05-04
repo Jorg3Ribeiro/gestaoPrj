@@ -1,5 +1,5 @@
 const UserThemeOptions = () => {
-    return
+  return
 }
 
 export default UserThemeOptions

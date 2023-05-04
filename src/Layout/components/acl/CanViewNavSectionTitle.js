@@ -5,11 +5,11 @@ import { useContext } from 'react'
 import { AbilityContext } from './can'
 
 const CanViewNavSectionTitle = props => {
-    const { children, navTitle } = props
+  const { children, navTitle } = props
 
-    const ability = useContext(AbilityContext)
+  const ability = useContext(AbilityContext)
 
-    return ability && ability.can(navTitle?.action, navTitle?.subject) ? <>{children}</> : null
+  return ability && ability.can(navTitle?.action, navTitle?.subject) ? <>{children}</> : null
 }
 
 export default CanViewNavSectionTitle

@@ -33,4 +33,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Excesão
 package-lock.json
+yarn.lock
+.env
