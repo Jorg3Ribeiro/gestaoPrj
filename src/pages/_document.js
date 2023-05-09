@@ -1,14 +1,14 @@
 // ** React Import
-import { Children } from 'react'
+import { Children } from 'react';
 
 // ** Next Import
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 // ** Emotion Imports
-import createEmotionServer from '@emotion/server/create-instance'
+import createEmotionServer from '@emotion/server/create-instance';
 
 // ** Utils Imports
-import { createEmotionCache } from 'src/@core/utils/create-emotion-cache'
+import { createEmotionCache } from 'src/@core/utils/create-emotion-cache';
 
 class CustomDocument extends Document {
   render() {

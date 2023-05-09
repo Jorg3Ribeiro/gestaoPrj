@@ -1,18 +1,21 @@
 // ** React Import
-import { useState } from 'react'
+import { useState } from 'react';
 
 // ** Next Import
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 // ** Context Import
-import { AbilityContext } from 'src/Layout/components/acl/can'
+import { AbilityContext } from 'src/Layout/components/acl/can';
+
+// ** Config Import
+import { buildAbilityFor } from 'src/configs/acl';
 
 // ** Components Imports
-import NotAuthorized from 'src/pages/401'
-import BlankLayout from 'src/@core/layouts/BlankLayout'
+import NotAuthorized from 'src/pages/401';
+import BlankLayout from 'src/@core/layouts/BlankLayout';
 
 // ** Hook Auth
-import { useAuth } from 'src/hooks/userAuth'
+import { useAuth } from 'src/hooks/userAuth';
 
 const AclGuard = props => {
   const { aclAbilities, children, guestGuard } = props

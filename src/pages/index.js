@@ -1,14 +1,14 @@
 // ** React Imports
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
 // ** Next Import
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 // ** Spinner Import
-import Spinner from 'src/@core/components/spinner'
+import Spinner from 'src/@core/components/spinner';
 
 // ** Hook Imports
-import { useAuth } from 'src/hooks/userAuth'
+import { useAuth } from 'src/hooks/userAuth';
 
 export const getHomeRoute = role => {
   if (role === 'client') return '/dashboard/client'
