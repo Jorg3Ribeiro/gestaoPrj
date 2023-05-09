@@ -35,22 +35,7 @@ const defaultSuggestionsData = [
     suggestions: [
       {
         icon: 'mdi:chart-donut',
-        suggestion: 'CRM',
-        link: '#'
-      },
-      {
-        icon: 'mdi:poll',
-        suggestion: 'Analytics',
-        link: '#'
-      },
-      {
-        icon: 'mdi:chart-bubble',
-        suggestion: 'eCommerce',
-        link: '#'
-      },
-      {
-        icon: 'mdi:account-group',
-        suggestion: 'User List',
+        suggestion: 'Dashboard',
         link: '#'
       }
     ]
@@ -60,22 +45,7 @@ const defaultSuggestionsData = [
     suggestions: [
       {
         icon: 'mdi:calendar-blank',
-        suggestion: 'Calendar',
-        link: '#'
-      },
-      {
-        icon: 'mdi:format-list-numbered',
-        suggestion: 'Invoice List',
-        link: '#'
-      },
-      {
-        icon: 'mdi:currency-usd',
-        suggestion: 'Pricing',
-        link: '#'
-      },
-      {
-        icon: 'mdi:account-cog-outline',
-        suggestion: 'Account Settings',
+        suggestion: 'Projetos',
         link: '#'
       }
     ]
