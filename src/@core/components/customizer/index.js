@@ -1,26 +1,26 @@
 // ** React Import
-import { useState } from 'react'
+import { useState } from 'react';
 
 // ** ScrollBar Import
-import PerfectScrollbar from 'react-perfect-scrollbar'
+import PerfectScrollbar from 'react-perfect-scrollbar';
 
 // ** MUI Imports
-import Radio from '@mui/material/Radio'
-import Switch from '@mui/material/Switch'
-import Divider from '@mui/material/Divider'
-import { styled } from '@mui/material/styles'
-import IconButton from '@mui/material/IconButton'
-import RadioGroup from '@mui/material/RadioGroup'
-import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
-import FormControlLabel from '@mui/material/FormControlLabel'
-import MuiDrawer from '@mui/material/Drawer'
+import Radio from '@mui/material/Radio';
+import Switch from '@mui/material/Switch';
+import Divider from '@mui/material/Divider';
+import { styled } from '@mui/material/styles';
+import IconButton from '@mui/material/IconButton';
+import RadioGroup from '@mui/material/RadioGroup';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import MuiDrawer from '@mui/material/Drawer';
 
 // ** Icon Imports
-import Icon from '../icon'
+import Icon from '../icon';
 
 // ** Hook Imports
-import { useSettings } from '../../hooks/useSettings'
+import { useSettings } from '../../hooks/useSettings';
 
 const Toggler = styled(Box)(({ theme }) => ({
   right: 0,
@@ -110,7 +110,7 @@ const Customizer = () => {
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>Personalize e visualize em tempo real</Typography>
           <IconButton
-            nClick={() => setOpen(false)}
+            onClick={() => setOpen(false)}
             sx={{
               right: 20,
               top: '50%',
@@ -300,32 +300,6 @@ const Customizer = () => {
           <Divider sx={{ m: '0 !important' }} />
 
           <CustomizerSpacing className='customizer-body'>
-            <Typography
-              component='p'
-              variant='caption'
-              sx={{ mb: 4, color: 'text.disabled', textTransform: 'uppercase' }}
-            >
-              Menu
-            </Typography>
-
-            <Box sx={{ mb: layout === 'horizontal' && appBar === 'hidden' ? {} : 4 }}>
-              <Typography>Menu Layout</Typography>
-              <RadioGroup
-                row
-                value={layout}
-                onChange={e => {
-                  saveSettings({
-                    ...settings,
-                    layout: e.target.value,
-                    lastLayout: e.target.value
-                  })
-                }}
-                sx={{ '& .MuiFormControlLabel-label': { fontSize: '.875rem', color: 'text.secondary' } }}
-              >
-                <FormControlLabel value='vertical' label='Vertical' control={<Radio />} />
-                <FormControlLabel value='horizontal' label='Horizontal' control={<Radio />} />
-              </RadioGroup>
-            </Box>
 
             {navHidden || layout === 'horizontal' ? null : (
               <Box sx={{ mb: 4 }}>
